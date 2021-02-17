@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WEB制作をするときに見るサイト集</title>
-  <meta name="description" content="WEB制作をするときに見るサイト集">
-</head>
-
-<body class="web-site">
-  <h1 class="site-title">WEB制作をするときに見るサイト集</h1>
-  <nav class="toc">
-    <h2 class="toc_title">目次</h2>
-    <ul class="toc_box">
-      <li><a href="#site-check">サイトがちゃんと完成しているかチェックするためのサイト</a></li>
-      <ul>
-        <li><a href="#html-css-checker">HTML/CSSチェッカー</a></li>
-        <li><a href="#img-alt-checker">画像のalt属性チェック</a></li>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WEB制作をするときに見るサイト集</title>
+    <meta name="description" content="WEB制作をするときに見るサイト集">
+  </head>
+  <body class="web-site">
+    <h1 class="site-title">WEB制作をするときに見るサイト集</h1>
+    <nav class="toc">
+      <h2 class="toc_title">目次</h2>
+      <ul class="toc_box">
+        <li><a href="#site-check">サイトがちゃんと完成しているかチェックするためのサイト</a>
+          <ul>
+            <li><a href="#html-css-checker">HTML/CSSチェッカー</a></li>
+            <li><a href="#img-alt-checker">画像のalt属性チェック</a></li>
+          </ul>
+        </li>
       </ul>
-    </ul>
-  </nav>
-  <article class="site-check" id="site-check">
-    <h2 class="article_main-title">サイトがちゃんと完成しているかチェックするためのサイト</h2>
-    <section class="site-check_section" id="html-css-checker">
-      <h3 class="section_title">HTML/CSSチェッカー</h3>
-      <p class="text">完成したファイルに打ち間違いやWeb標準に違反してないかをしらべることができるサイト</p>
-      <dl>
-        <dt>HTML:</dt>
-        <dd> <a href="http://validator.w3.org/nu/" target="_blank" rel="noopener">Ready to check - Nu Html Checker</a></dd>
-      </dl>
-      <dl>
-        <dt>CSS:</dt>
-        <dd> <a href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">W3C CSS 検証サービス</a></dd>
-      </dl>
-      <p class="text">両方とも<a href="https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener">W3C</a>というWebのルールに深く携わっているところが運営してるサイトなので信頼度は抜群。CSSのほうだけ何故か日本語化されている。</p>
-      <h4 class="section_subtitle">使い方</h4>
-      <ol class="how-to-list_box">
-        <li>既に存在しているサイトのURLを入力する</li>
-        <li>パソコン内にあるHTMLやCSSファイルを直接アップロードする</li>
-        <li>テキストエリアに直接文字を入力したりコピペしたりする</li>
-      </ol>
-      <p class="text">主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。</p>
-    </section>
-    <section class="site-check_section" id="img-alt-checker">
-      <h3 class="section_title">画像のalt属性チェック</h3>
-      <p class="text">画像にalt属性を付けるのは必須ですが時々忘れることがあります。<br>それを防ぐために完成したサイトにこのブックマークレットを使えばサイトに使われている画像とalt属性を一覧で見ることができます。</p>
-      <p class="text"><a href="https://gist.github.com/todays-mitsui/84fccfa62450cdf61749444c88341e5e" target="_blank" rel="noopener">altチェック用ブックマークレット</a></p>
-      <div class="code-box">
-        <pre><code>javascript:(function(){var rid=&#39;TW_alt_check&#39;;if(document.getElementById(rid))return;function e(t){return document.getElementsByTagName(t)}function a(o,a){return o.getAttribute(a)}var i=e(&#39;img&#39;);if(i.length&lt;=0)return;var r=document.createElement(&#39;div&#39;);var rcss=&#39;padding:5px;position:absolute;top:0;left:0;background:#fff;border:solid%20#ccc%201px;z-index:999;&#39;;var%20 tblcss=&#39;%20style=\&#39;border-collapse:collapse;background:#fff;\&#39;&#39;;var%20 tdlcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:right;\&#39;&#39;;var%20 tdrcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:left;\&#39;&#39;;r.id=rid;r.style.cssText=rcss;var%20 h=&#39;%3Ctable&#39;+tblcss+&#39;&gt;&#39;;for(var%20 j=0;j&lt;i.length;j++){h+=(j%252==0)?&#39;&lt;tr%20bgcolor=#f6f6f6&gt;&#39;:&#39;&lt;tr%20bgcolor=%23f2f2f2&gt;&#39;;h+=&#39;%3Ctd&#39;+tdlcss+&#39;%3E%3Cimg%20src=&#39;+a(i[j],&#39;src&#39;)+&#39;%3E%3C/td%3E%3Ctd&#39;+tdrcss+&#39;%3E&#39;+a(i[j],&#39;alt&#39;)+&#39;&lt;/td&gt;&lt;/tr&gt;&#39;}h+=&#39;&lt;/table&gt;&#39;;e(&#39;body&#39;)[0].appendChild(r);r.innerHTML=h;r.ondblclick=function(){this.parentNode.removeChild(this)};window.scrollTo(0,0)})()</code></pre>
-        <p class="code-caption">上記サイトにあるコード</p>
-      </div>
-      <h4 class="section_subtitle">使い方</h4>
-      <ol class="how-to-list_box">
-        <li>適当なサイトをブックマークする</li>
-        <li>ブックマークした項目を編集し名前欄を「画像のalt属性チェック」など適当につけてURL欄に上記のコードをコピーしていれます。</li>
-        <li>適当なサイト（TRYZEのサイトなど）を開いて「2.」で完成したブックマークレットと呼ばれるものをクリックして一覧が表示されれば問題なく実行できてます。</li>
-      </ol>
-    </section>
-  </article>
-  <div class="totop_box">
-    <button type="button" id="totop-button">トップへ</button>
-  </div>
-</body>
-
+    </nav>
+    <article class="site-check" id="site-check">
+      <h2 class="article_main-title">サイトがちゃんと完成しているかチェックするためのサイト</h2>
+      <section class="site-check_section" id="html-css-checker">
+        <h3 class="section_title">HTML/CSSチェッカー</h3>
+        <p class="text">完成したファイルに打ち間違いやWeb標準に違反してないかをしらべることができるサイト</p>
+        <dl>
+          <dt>HTML:</dt>
+          <dd> <a href="http://validator.w3.org/nu/" target="_blank" rel="noopener">Ready to check - Nu Html Checker</a></dd>
+        </dl>
+        <dl>
+          <dt>CSS:</dt>
+          <dd> <a href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">W3C CSS 検証サービス</a></dd>
+        </dl>
+        <p class="text">両方とも<a href="https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener">W3C</a>というWebのルールに深く携わっているところが運営してるサイトなので信頼度は抜群。CSSのほうだけ何故か日本語化されている。</p>
+        <h4 class="section_subtitle">使い方</h4>
+        <ol class="how-to-list_box">
+          <li>既に存在しているサイトのURLを入力する</li>
+          <li>パソコン内にあるHTMLやCSSファイルを直接アップロードする</li>
+          <li>テキストエリアに直接文字を入力したりコピペしたりする</li>
+        </ol>
+        <p class="text">主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。</p>
+      </section>
+      <section class="site-check_section" id="img-alt-checker">
+        <h3 class="section_title">画像のalt属性チェック</h3>
+        <p class="text">画像にalt属性を付けるのは必須ですが時々忘れることがあります。<br>それを防ぐために完成したサイトにこのブックマークレットを使えばサイトに使われている画像とalt属性を一覧で見ることができます。</p>
+        <p class="text"><a href="https://gist.github.com/todays-mitsui/84fccfa62450cdf61749444c88341e5e" target="_blank" rel="noopener">altチェック用ブックマークレット</a></p>
+        <div class="code-box">
+          <pre><code>javascript:(function(){var rid=&#39;TW_alt_check&#39;;if(document.getElementById(rid))return;function e(t){return document.getElementsByTagName(t)}function a(o,a){return o.getAttribute(a)}var i=e(&#39;img&#39;);if(i.length&lt;=0)return;var r=document.createElement(&#39;div&#39;);var rcss=&#39;padding:5px;position:absolute;top:0;left:0;background:#fff;border:solid%20#ccc%201px;z-index:999;&#39;;var%20 tblcss=&#39;%20style=\&#39;border-collapse:collapse;background:#fff;\&#39;&#39;;var%20 tdlcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:right;\&#39;&#39;;var%20 tdrcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:left;\&#39;&#39;;r.id=rid;r.style.cssText=rcss;var%20 h=&#39;%3Ctable&#39;+tblcss+&#39;&gt;&#39;;for(var%20 j=0;j&lt;i.length;j++){h+=(j%252==0)?&#39;&lt;tr%20bgcolor=#f6f6f6&gt;&#39;:&#39;&lt;tr%20bgcolor=%23f2f2f2&gt;&#39;;h+=&#39;%3Ctd&#39;+tdlcss+&#39;%3E%3Cimg%20src=&#39;+a(i[j],&#39;src&#39;)+&#39;%3E%3C/td%3E%3Ctd&#39;+tdrcss+&#39;%3E&#39;+a(i[j],&#39;alt&#39;)+&#39;&lt;/td&gt;&lt;/tr&gt;&#39;}h+=&#39;&lt;/table&gt;&#39;;e(&#39;body&#39;)[0].appendChild(r);r.innerHTML=h;r.ondblclick=function(){this.parentNode.removeChild(this)};window.scrollTo(0,0)})()</code></pre>
+          <p class="code-caption">上記サイトにあるコード</p>
+        </div>
+        <h4 class="section_subtitle">使い方</h4>
+        <ol class="how-to-list_box">
+          <li>適当なサイトをブックマークする</li>
+          <li>ブックマークした項目を編集し名前欄を「画像のalt属性チェック」など適当につけてURL欄に上記のコードをコピーしていれます。</li>
+          <li>適当なサイト（TRYZEのサイトなど）を開いて「2.」で完成したブックマークレットと呼ばれるものをクリックして一覧が表示されれば問題なく実行できてます。</li>
+        </ol>
+      </section>
+    </article>
+    <div class="totop_box">
+      <button type="button" id="totop-button">トップへ</button>
+    </div>
+  </body>
 </html>
