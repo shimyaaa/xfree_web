@@ -10,6 +10,7 @@ yarn add sass pug pug-cli
 ```json
 "scripts": {
   "sass": "sass",
+  "sass:w": "sass --watch src/assets/css:dist/assets/css",
   "pug": "pug",
   "pug:w": "pug -P -w -o dist/ src/index.pug"
 }
