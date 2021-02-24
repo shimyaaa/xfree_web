@@ -15,3 +15,7 @@ yarn add sass pug pug-cli
   "pug:w": "pug -P -w -o dist/ src/index.pug"
 }
 ```
+
+## 追加したい機能
+
+* コード部分をワンクリックでクリップボードにコピーする

@@ -5,6 +5,7 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     title WEB制作をするときに見るサイト集
     meta(name="description", content="WEB制作をするときに見るサイト集")
+    link(rel="stylesheet", href="assets/css/style.css")
   body.web-site
     h1.site-title WEB制作をするときに見るサイト集
     nav.toc
@@ -22,14 +23,15 @@ html(lang="ja")
       section#html-css-checker.site-check_section
         h3.section_title HTML/CSSチェッカー
         p.text 完成したファイルに打ち間違いやWeb標準に違反してないかをしらべることができるサイト
-        dl
-          dt HTML:
-          dd
-            a(href="http://validator.w3.org/nu/" target="_blank" rel="noopener") Ready to check - Nu Html Checker
-        dl
-          dt CSS:
-          dd
-            a(href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener") W3C CSS 検証サービス
+        .link-box
+          dl.link-box_item
+            dt.link-box_item_title HTML:
+            dd.link-box_item_link
+              a(href="http://validator.w3.org/nu/" target="_blank" rel="noopener") Ready to check - Nu Html Checker
+          dl.link-box_item
+            dt.link-box_item_title CSS:
+            dd.link-box_item_link
+              a(href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener") W3C CSS 検証サービス
         p.text 両方とも
           a(href="https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener") W3C
           | というWebのルールに深く携わっているところが運営してるサイトなので信頼度は抜群。CSSのほうだけ何故か日本語化されている。
@@ -44,12 +46,12 @@ html(lang="ja")
         p.text 画像にalt属性を付けるのは必須ですが時々忘れることがあります。
           br
           | それを防ぐために完成したサイトにこのブックマークレットを使えばサイトに使われている画像とalt属性を一覧で見ることができます。
-        p.text
-          a(href="https://gist.github.com/todays-mitsui/84fccfa62450cdf61749444c88341e5e" target="_blank" rel="noopener") altチェック用ブックマークレット
         .code-box
-          pre
+          p.text
+            a(href="https://gist.github.com/todays-mitsui/84fccfa62450cdf61749444c88341e5e" target="_blank" rel="noopener") altチェック用ブックマークレット - GitHub
+          pre.code-box_pre
             code javascript:(function(){var rid=&#39;TW_alt_check&#39;;if(document.getElementById(rid))return;function e(t){return document.getElementsByTagName(t)}function a(o,a){return o.getAttribute(a)}var i=e(&#39;img&#39;);if(i.length&lt;=0)return;var r=document.createElement(&#39;div&#39;);var rcss=&#39;padding:5px;position:absolute;top:0;left:0;background:#fff;border:solid%20#ccc%201px;z-index:999;&#39;;var%20 tblcss=&#39;%20style=\&#39;border-collapse:collapse;background:#fff;\&#39;&#39;;var%20 tdlcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:right;\&#39;&#39;;var%20 tdrcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:left;\&#39;&#39;;r.id=rid;r.style.cssText=rcss;var%20 h=&#39;%3Ctable&#39;+tblcss+&#39;&gt;&#39;;for(var%20 j=0;j&lt;i.length;j++){h+=(j%252==0)?&#39;&lt;tr%20bgcolor=#f6f6f6&gt;&#39;:&#39;&lt;tr%20bgcolor=%23f2f2f2&gt;&#39;;h+=&#39;%3Ctd&#39;+tdlcss+&#39;%3E%3Cimg%20src=&#39;+a(i[j],&#39;src&#39;)+&#39;%3E%3C/td%3E%3Ctd&#39;+tdrcss+&#39;%3E&#39;+a(i[j],&#39;alt&#39;)+&#39;&lt;/td&gt;&lt;/tr&gt;&#39;}h+=&#39;&lt;/table&gt;&#39;;e(&#39;body&#39;)[0].appendChild(r);r.innerHTML=h;r.ondblclick=function(){this.parentNode.removeChild(this)};window.scrollTo(0,0)})()
-          p.code-caption 上記サイトにあるコード
+          p.code-box_caption 上記サイトにあるコード
         h4.section_subtitle 使い方
         ol.how-to-list_box
           li 適当なサイトをブックマークする

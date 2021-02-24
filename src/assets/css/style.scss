@@ -1,0 +1,94 @@
+@use "reset" as r;
+
+$text-caption-color: #37352f;
+
+a {
+  color:#37352f;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.web-site {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .web-site {
+    padding: 0 20px;
+  }
+}
+
+.toc_box {
+  padding-left: 26px;
+  ul {
+    padding-left: 26px;
+    list-style-type: disc;
+  }
+}
+
+.article_main-title {
+  margin-bottom: 0;
+}
+
+.link-box {
+  padding-left: 1em;
+  &_item {
+    margin: 0;
+    &_title, &_link {
+      display: inline;
+    }
+    &_link {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.section_subtitle {
+  @include r.fz-rem(16);
+  text-decoration: underline;
+}
+
+.site-check {
+  padding-top: 1px;
+}
+
+.how-to-list_box {
+  padding-left: 3em;
+  li:not(:first-of-type) {
+    margin-top: .2em;
+  }
+}
+
+.site-check_section {
+  padding-top: 10px;
+}
+
+.code-box {
+  .text {
+    margin: 0;
+  }
+  &_pre {
+    padding: 2em 1.5em;
+    overflow-x: scroll;
+    background-color: #f7f6f3;
+    @include r.fz-rem(14);
+    margin: .5em 0;
+  }
+  &_caption {
+    @include r.fz-rem(12);
+    color: $text-caption-color;
+    opacity: .7;
+    margin-top: 0.5em;
+  }
+}
+
+.totop_box {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
