@@ -1,0 +1,11 @@
+/* 見た目・装飾 */
+
+// ulのlist-style-typeを統一
+ul ul {
+  list-style-type: disc;
+}
+
+// buttonにカーソルが重なったらポインタに変更 (from ress)
+button {
+  cursor: pointer;
+}

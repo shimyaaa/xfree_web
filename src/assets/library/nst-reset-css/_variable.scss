@@ -1,0 +1,12 @@
+// 基本フォントサイズ
+$base-font-size: 16;
+$base-font-size-px: $base-font-size + px;
+
+// フォントファミリー
+$base-font-family: sans-serif;
+// $base-font-family: "Meiryo", sans-serif;
+// 理想をあとで書く。個人的に游ゴシックよりメイリオが見やすい。Webフォントは使わない方向で
+
+// 入れ子状態のインデントサイズ
+$indent-size: 20;
+$indent-size-px: $indent-size + px;

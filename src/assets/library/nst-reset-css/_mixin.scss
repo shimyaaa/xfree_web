@@ -1,0 +1,6 @@
+@use "variable" as var;
+
+// フォントサイズをremで表示するための関数
+@mixin fz-rem($fsize) {
+  font-size: $fsize/var.$base-font-size + rem;
+}

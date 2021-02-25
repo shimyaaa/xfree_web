@@ -1,0 +1,18 @@
+@use "variable" as var;
+
+/* base */
+
+html {
+  box-sizing: border-box; // border-boxが使いやすい (from ress)
+  line-height: 1; // とりあえず1にリセット
+  font-size: var.$base-font-size-px; // デフォルトフォントサイズは"_variable.scss"で管理。通常16px。
+  scroll-behavior: smooth; // スムーススクロールをデフォルトでオン
+  font-family: var.$base-font-family;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat; // 背景のリピートをデフォルトでオフ (from ress)
+  box-sizing: inherit; // border-boxを継承 (from ress)
+}

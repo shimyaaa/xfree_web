@@ -1,0 +1,37 @@
+/* フォント */
+
+@use "mixin" as m;
+
+// 見出しのフォントサイズ remで
+h1 {
+  @include m.fz-rem(32);
+}
+h2 {
+  @include m.fz-rem(26);
+}
+h3 {
+  @include m.fz-rem(22);
+}
+h4 {
+  @include m.fz-rem(20);
+}
+h5 {
+  @include m.fz-rem(18);
+}
+h6 {
+  @include m.fz-rem(16);
+}
+
+
+// 見出し・本文の行間・文字間を調整
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+}
+
+p, li, dt, dd {
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, dt, dd {
+  letter-spacing: .05em;
+}
