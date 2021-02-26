@@ -1,4 +1,5 @@
-@use "reset" as r;
+@use "../library/nst-reset-css/style"; // reset.css
+@use "../library/nst-reset-css/mixin" as m;
 
 $text-caption-color: #37352f;
 
@@ -49,7 +50,7 @@ a {
 }
 
 .section_subtitle {
-  @include r.fz-rem(16);
+  @include m.fz-rem(16);
   text-decoration: underline;
 }
 
@@ -76,11 +77,11 @@ a {
     padding: 2em 1.5em;
     overflow-x: scroll;
     background-color: #f7f6f3;
-    @include r.fz-rem(14);
+    @include m.fz-rem(14);
     margin: .5em 0;
   }
   &_caption {
-    @include r.fz-rem(12);
+    @include m.fz-rem(12);
     color: $text-caption-color;
     opacity: .7;
     margin-top: 0.5em;

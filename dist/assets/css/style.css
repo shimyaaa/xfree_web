@@ -1,21 +1,28 @@
+@charset "UTF-8";
+/* base */
 html {
   box-sizing: border-box;
   line-height: 1;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
 *,
 ::before,
 ::after {
+  background-repeat: no-repeat;
   box-sizing: inherit;
 }
 
+/* 余白調整 (padding, margin) */
 body,
 ul, ol {
   margin: 0;
 }
 
 ul, ol {
-  padding: 0;
+  padding-inline-start: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,27 +39,24 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-  padding-inline-start: 1em;
+  padding-inline-start: 20px;
 }
 
 dd {
-  margin-inline-start: 2em;
+  margin-inline-start: 20px;
   padding-top: 0.5em;
 }
 
-html {
-  font-size: 16px;
+/* 見た目・装飾 */
+ul ul {
+  list-style-type: disc;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.4;
+button {
+  cursor: pointer;
 }
 
+/* フォント */
 h1 {
   font-size: 2rem;
 }
@@ -77,28 +81,16 @@ h6 {
   font-size: 1rem;
 }
 
-p,
-li,
-dt,
-dd {
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+}
+
+p, li, dt, dd {
   line-height: 1.75;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-dt,
-dd {
+h1, h2, h3, h4, h5, h6, p, li, dt, dd {
   letter-spacing: 0.05em;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 a {
