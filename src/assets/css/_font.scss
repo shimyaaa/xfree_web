@@ -1,0 +1,9 @@
+@use "variable" as var;
+
+a {
+  color:var.$sub-text-color;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}

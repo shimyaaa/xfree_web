@@ -1,0 +1,15 @@
+// @use "variable" as var;
+@use "mixin" as m;
+// $breakpoint-md: 'screen and (min-width: 768px)';
+/* 基本 */
+.web-site {
+  max-width: 768px;
+  padding: 0 20px;
+  @include m.mq(md) {
+    margin: 0 auto 40px;
+    padding: 0;
+  };
+}
+
+
+

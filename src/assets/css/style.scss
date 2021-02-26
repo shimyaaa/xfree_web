@@ -1,27 +1,8 @@
 @use "../library/nst-reset-css/style"; // reset.css
-@use "../library/nst-reset-css/mixin" as m;
-
-$text-caption-color: #37352f;
-
-a {
-  color:#37352f;
-  opacity: .7;
-  &:hover {
-    opacity: 1;
-  }
-}
-
-
-.web-site {
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-@media screen and (max-width: 767px) {
-  .web-site {
-    padding: 0 20px;
-  }
-}
+@use "../library/nst-reset-css/mixin" as r_m;
+@use "variable" as var;
+@use "font";
+@use "base";
 
 .toc_box {
   padding-left: 26px;
@@ -50,7 +31,7 @@ a {
 }
 
 .section_subtitle {
-  @include m.fz-rem(16);
+  @include r_m.fz-rem(16);
   text-decoration: underline;
 }
 
@@ -77,12 +58,12 @@ a {
     padding: 2em 1.5em;
     overflow-x: scroll;
     background-color: #f7f6f3;
-    @include m.fz-rem(14);
+    @include r_m.fz-rem(14);
     margin: .5em 0;
   }
   &_caption {
-    @include m.fz-rem(12);
-    color: $text-caption-color;
+    @include r_m.fz-rem(12);
+    color: var.$sub-text-color;
     opacity: .7;
     margin-top: 0.5em;
   }
