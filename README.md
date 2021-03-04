@@ -1,5 +1,13 @@
 # xfree_web
 
+## サイト構造
+
+```pug
+//- 記事エリア基本
+article#hoge.article_area
+  h2.article_main-title 見出し
+```
+
 ## やったこと
 
 ```shell
