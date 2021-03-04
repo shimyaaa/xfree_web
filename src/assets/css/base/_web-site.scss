@@ -1,6 +1,5 @@
-// @use "variable" as var;
-@use "mixin" as m;
-// $breakpoint-md: 'screen and (min-width: 768px)';
+@use "../mixin" as m;
+
 /* 基本 */
 .web-site {
   max-width: 768px;
@@ -10,6 +9,3 @@
     padding: 0;
   };
 }
-
-
-

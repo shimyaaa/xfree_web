@@ -121,8 +121,20 @@ a:hover {
   list-style-type: disc;
 }
 
+/* common-parts */
+.totop_box {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
 .article_main-title {
   margin-bottom: 0;
+}
+
+.section_subtitle {
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
 .link-box {
@@ -139,24 +151,11 @@ a:hover {
   margin: 0;
 }
 
-.section_subtitle {
-  font-size: 1rem;
-  text-decoration: underline;
-}
-
-.site-check {
-  padding-top: 1px;
-}
-
 .how-to-list_box {
   padding-left: 3em;
 }
 .how-to-list_box li:not(:first-of-type) {
   margin-top: 0.2em;
-}
-
-.site-check_section {
-  padding-top: 10px;
 }
 
 .code-box .text {
@@ -176,10 +175,13 @@ a:hover {
   margin-top: 0.5em;
 }
 
-.totop_box {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+/* .site-check */
+.site-check {
+  padding-top: 1px;
+}
+
+.site-check_section {
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

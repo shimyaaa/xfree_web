@@ -1,76 +1,8 @@
 @use "../library/nst-reset-css/style"; // reset.css
 @use "../library/nst-reset-css/mixin" as r_m;
 @use "variable" as var;
-@use "font";
-@use "base";
-
-.toc_box {
-  padding-left: 26px;
-  ul {
-    padding-left: 26px;
-    list-style-type: disc;
-  }
-}
-
-.article_main-title {
-  margin-bottom: 0;
-}
-
-.link-box {
-  padding-left: 1em;
-  &_item {
-    margin: 0;
-    &_title, &_link {
-      display: inline;
-    }
-    &_link {
-      padding: 0;
-      margin: 0;
-    }
-  }
-}
-
-.section_subtitle {
-  @include r_m.fz-rem(16);
-  text-decoration: underline;
-}
-
-.site-check {
-  padding-top: 1px;
-}
-
-.how-to-list_box {
-  padding-left: 3em;
-  li:not(:first-of-type) {
-    margin-top: .2em;
-  }
-}
-
-.site-check_section {
-  padding-top: 10px;
-}
-
-.code-box {
-  .text {
-    margin: 0;
-  }
-  &_pre {
-    padding: 2em 1.5em;
-    overflow-x: scroll;
-    background-color: #f7f6f3;
-    @include r_m.fz-rem(14);
-    margin: .5em 0;
-  }
-  &_caption {
-    @include r_m.fz-rem(12);
-    color: var.$sub-text-color;
-    opacity: .7;
-    margin-top: 0.5em;
-  }
-}
-
-.totop_box {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-}
+@use "base/font";
+@use "base/web-site";
+@use "base/toc";
+@use "base/common-parts";
+@use "site-check/site-check";

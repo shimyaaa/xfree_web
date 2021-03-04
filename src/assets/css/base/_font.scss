@@ -1,5 +1,6 @@
-@use "variable" as var;
+@use "../variable" as var;
 
+// リンクテキスト
 a {
   color:var.$sub-text-color;
   opacity: .7;

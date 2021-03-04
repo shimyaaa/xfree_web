@@ -1,0 +1,65 @@
+@use "../../library/nst-reset-css/mixin" as r_m;
+@use "../variable" as var;
+
+/* common-parts */
+
+// totop
+.totop_box {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+// メイン見出し
+.article_main-title {
+  margin-bottom: 0;
+}
+
+// セクションのタイトル
+.section_subtitle {
+  @include r_m.fz-rem(16);
+  text-decoration: underline;
+}
+
+// 外部リンク紹介
+.link-box {
+  padding-left: 1em;
+  &_item {
+    margin: 0;
+    &_title, &_link {
+      display: inline;
+    }
+    &_link {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+// 使い方
+.how-to-list_box {
+  padding-left: 3em;
+  li:not(:first-of-type) {
+    margin-top: .2em;
+  }
+}
+
+// コード関係
+.code-box {
+  .text {
+    margin: 0;
+  }
+  &_pre {
+    padding: 2em 1.5em;
+    overflow-x: scroll;
+    background-color: #f7f6f3;
+    @include r_m.fz-rem(14);
+    margin: .5em 0;
+  }
+  &_caption {
+    @include r_m.fz-rem(12);
+    color: var.$sub-text-color;
+    opacity: .7;
+    margin-top: 0.5em;
+  }
+}
