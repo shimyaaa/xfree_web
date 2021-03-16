@@ -1,10 +1,23 @@
 @use "../variable" as var;
 
+/* 基本フォント */
+html {
+  color: #333;
+}
+
 // リンクテキスト
 a {
   color:var.$sub-text-color;
   opacity: .7;
+  &[href$=".png"] {
+    opacity: 1;
+    &:hover{
+      outline: 2px solid #ccc;
+    }
+  }
   &:hover {
     opacity: 1;
   }
 }
+
+// material-icons

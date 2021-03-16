@@ -1,49 +1,73 @@
 @use "../../library/nst-reset-css/mixin" as r_m;
+@use "../mixin" as m;
 @use "../variable" as var;
+@use "../extend";
 
 /* common-parts */
 
 // totop
-.totop_box {
+.totop-box {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  background-color: rgba(256,256,256,.5);
+  border-radius: 50%;
+  &_icon {
+    font-size: 48px;
+  }
+}
+
+// text
+.text {
+  padding: 0 .5em;
 }
 
 // メインの記事エリア
-.article_area {
+.article-area {
   padding-top: 1px;
 }
 
-// メイン見出し
-.article_main-title {
+.article-area_section {
+  padding-top: 10px;
+}
+
+// メインの記事見出し
+.article-area_main-title {
   margin-bottom: 0;
 }
 
-// セクションのタイトル
-.section_subtitle {
-  @include r_m.fz-rem(16);
-  text-decoration: underline;
+.section {
+  &_title {}
+  &_sub {
+    &_title {
+      @include r_m.fz-rem(16);
+    }
+  }
+
 }
 
 // 外部リンク紹介
 .link-box {
-  padding-left: 1em;
+  padding: 1em;
+  border: 2px solid #ccc;
+  background-color: #eee;
   &_item {
     margin: 0;
-    &_title, &_link {
-      display: inline;
-    }
     &_link {
-      padding: 0;
+      padding: 0 .5em;
       margin: 0;
     }
   }
 }
 
 // 使い方
+.how-to-list_title {
+  @include r_m.fz-rem(16);
+  text-decoration: underline;
+}
+
 .how-to-list_box {
-  padding-left: 3em;
+  padding-left: 2em;
   li:not(:first-of-type) {
     margin-top: .2em;
   }
@@ -63,8 +87,26 @@
   }
   &_caption {
     @include r_m.fz-rem(12);
-    color: var.$sub-text-color;
-    opacity: .7;
-    margin-top: 0.5em;
+    @extend %caption;
+  }
+}
+
+// 図表
+.img-figure {
+  padding: 0 16px;
+  margin: 0;
+  &_container {
+    display: flex;
+  }
+  @include m.mq(md) {
+    padding: 0 32px;
+  }
+  &_img {
+    width: 100%;
+    height: auto;
+  }
+  &_caption {
+    @include r_m.fz-rem(12);
+    @extend %caption;
   }
 }

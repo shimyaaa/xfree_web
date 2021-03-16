@@ -5,6 +5,7 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     title WEB制作をするときに見るサイト集
     meta(name="description", content="WEB制作をするときに見るサイト集")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="assets/css/style.css")
   body.web-site
     h1.site-title WEB制作をするときに見るサイト集
@@ -13,14 +14,25 @@ html(lang="ja")
       ul.toc_box
         li
           a(href="#site-check") サイトがちゃんと完成しているかチェックするためのサイト
-          ul
+          ul.toc_section_title
             li
               a(href="#html-css-checker") HTML/CSSチェッカー
             li
               a(href="#img-alt-checker") 画像のalt属性チェック
-    article#site-check.article_area
-      h2.article_main-title サイトがちゃんと完成しているかチェックするためのサイト
-      section#html-css-checker.site-check_section
+        li
+          a(href="#recommend-site") Web制作するときに便利なサイト
+          ul.toc_section_title
+            li
+              a(href="#can-i-use") Can I use...
+            li
+              a(href="#tinypng") TinyPNG
+            li
+              a(href="#codic") codic
+            li
+              a(href="#placehold") Placehold.jp
+    article#site-check.article-area
+      h2.article-area_main-title サイトがちゃんと完成しているかチェックするためのサイト
+      section#html-css-checker.article-area_section
         h3.section_title HTML/CSSチェッカー
         p.text 完成したファイルに打ち間違いやWeb標準に違反してないかをしらべることができるサイト
         .link-box
@@ -35,13 +47,14 @@ html(lang="ja")
         p.text 両方とも
           a(href="https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener") W3C
           | というWebのルールに深く携わっているところが運営してるサイトなので信頼度は抜群。CSSのほうだけ何故か日本語化されている。
-        h4.section_subtitle 使い方
-        ol.how-to-list_box
-          li 既に存在しているサイトのURLを入力する
-          li パソコン内にあるHTMLやCSSファイルを直接アップロードする
-          li テキストエリアに直接文字を入力したりコピペしたりする
-        p.text 主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。
-      section#img-alt-checker.site-check_section
+        section.how-to-list
+          h4.how-to-list_title 使い方
+          ol.how-to-list_box
+            li 既に存在しているサイトのURLを入力する
+            li パソコン内にあるHTMLやCSSファイルを直接アップロードする
+            li テキストエリアに直接文字を入力したりコピペしたりする
+          p.text 主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。
+      section#img-alt-checker.article-area_section
         h3.section_title 画像のalt属性チェック
         p.text 画像にalt属性を付けるのは必須ですが時々忘れることがあります。
           br
@@ -52,10 +65,129 @@ html(lang="ja")
           pre.code-box_pre
             code javascript:(function(){var rid=&#39;TW_alt_check&#39;;if(document.getElementById(rid))return;function e(t){return document.getElementsByTagName(t)}function a(o,a){return o.getAttribute(a)}var i=e(&#39;img&#39;);if(i.length&lt;=0)return;var r=document.createElement(&#39;div&#39;);var rcss=&#39;padding:5px;position:absolute;top:0;left:0;background:#fff;border:solid%20#ccc%201px;z-index:999;&#39;;var%20 tblcss=&#39;%20style=\&#39;border-collapse:collapse;background:#fff;\&#39;&#39;;var%20 tdlcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:right;\&#39;&#39;;var%20 tdrcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:left;\&#39;&#39;;r.id=rid;r.style.cssText=rcss;var%20 h=&#39;%3Ctable&#39;+tblcss+&#39;&gt;&#39;;for(var%20 j=0;j&lt;i.length;j++){h+=(j%252==0)?&#39;&lt;tr%20bgcolor=#f6f6f6&gt;&#39;:&#39;&lt;tr%20bgcolor=%23f2f2f2&gt;&#39;;h+=&#39;%3Ctd&#39;+tdlcss+&#39;%3E%3Cimg%20src=&#39;+a(i[j],&#39;src&#39;)+&#39;%3E%3C/td%3E%3Ctd&#39;+tdrcss+&#39;%3E&#39;+a(i[j],&#39;alt&#39;)+&#39;&lt;/td&gt;&lt;/tr&gt;&#39;}h+=&#39;&lt;/table&gt;&#39;;e(&#39;body&#39;)[0].appendChild(r);r.innerHTML=h;r.ondblclick=function(){this.parentNode.removeChild(this)};window.scrollTo(0,0)})()
           p.code-box_caption 上記サイトにあるコード
-        h4.section_subtitle 使い方
+        h4.how-to-list_title 使い方
         ol.how-to-list_box
           li 適当なサイトをブックマークする
           li ブックマークした項目を編集し名前欄を「画像のalt属性チェック」など適当につけてURL欄に上記のコードをコピーしていれます。
           li 適当なサイト（TRYZEのサイトなど）を開いて「2.」で完成したブックマークレットと呼ばれるものをクリックして一覧が表示されれば問題なく実行できてます。
-    .totop_box
-      a(href="#")#totop トップへ
+    article#recommend-site.article-area
+      h2.article-area_main-title Web制作するときに便利なサイト
+      section#can-i-use.article-area_section
+        h3.section_title Can I use...
+        .link-box
+          dl.link-box_item
+            dt.link-box_item_title Can I use... Support tables for HTML5, CSS3, etc:
+            dd.link-box_item_link
+              a(href="https://caniuse.com/" target="_blank" rel="noopener") https://caniuse.com/
+        p.text HTML要素やCSSプロパティなどのWeb関係のものが最新のブラウザに対応しているか、いつから対応しているかを知ることができるサイト。
+        section.how-to-list
+          h4.how-to-list_title 使い方
+          p.text 例えば最近広まっている<mark>"WebP"</mark>というGoogleが開発しているJPEG, PNGに代わる軽くて高画質な画像ファイルはどこまでのブラウザが対応しているかが見れます。（以下のサポート状況はすべて2021年1月21日のものです）
+          p.text
+            a(href="https://caniuse.com/webp" target="_blank" rel="noopener") Can I use... "WebP image format"
+          p.text 対応の種類は大きく3つに分かれていて
+          ul
+            li 緑色は問題なく対応しているブラウザ
+            li 黄色は部分的に対応していたり注意が必要なブラウザ
+            li 赤色は全く対応されていないブラウザ
+          p.text になっています。
+          p.text <mark>WebP</mark>の場合は
+          ul
+            li "Chrome, Edge, Opera"など"Chromium系"は対応している。
+            li "Firefox"も対応している。
+            li "Chromium系"のモバイル機種の"Chrome for Android"でも対応。
+            li 似たモバイル機種の"iOS"では2020年9月にリリースされた最新のiOS14から対応。
+            li Macのデフォルトブラウザの"Safari"は最新のOSである"macOS 11 Big Sur"にインストールされた"Safari 14"でないと対応してない。という特殊な条件があるので黄色の表示。
+            li IE (Internet Explorer)はもう更新されないので最新技術には対応されないはずなので永遠に赤色の表示。
+          p.text ということが読み取れるので、古い端末を利用している人を切り捨ててある程度最新の状態を維持できてるユーザーが多く訪れることを想定しているWebサイトなら既にガンガン使える技術ということがわかります。
+          p.text 他の要素やプロパティも見ていくと<mark>"h1"</mark>と誰でも必ずHTML要素は
+            a(href="https://caniuse.com/mdn-html_elements_h1" target="_blank" rel="noopener") "HTML element: h1"
+            | を見ると主要ブラウザで全て緑色になっており問題なく使えることがわかります。
+          p.text 逆に
+            a(href="https://caniuse.com/loading-lazy-attr" target="_blank" rel="noopener") "Lazy loading via attribute for images &amp; iframes”
+            | という最近追加された画像やiframeの読み込むタイミングを指定できる属性はほぼ赤色で"Chromium系"のみ使えて"FIrefox"は画像のみ対応ということで使うには注意が必要なことがわかります。
+      section#tinypng.article-area_section
+        h3.section_title TinyPNG
+        .link-box
+          dl.link-box_item
+            dt.link-box_item_title TinyPNG – Compress PNG images while preserving transparency:
+            dd.link-box_item_link
+              a(href="https://tinypng.com/" target="_blank" rel="noopener") https://tinypng.com/
+        p.text PNGとJPEGを見た目損なわずにファイルサイズを削減してくれるサイトです。特にPNG画像で威力を発揮します。透過済のPNGファイルでも透過済のまま圧縮できます。
+        section.how-to-list
+          h4.how-to-list_title 使い方
+          ol.how-to-list_box
+            li 圧縮したいファイルをアップロードする（一度に最高20枚、1ファイル5MBまで可能。それ以上に一度で圧縮したい場合は有料プランへ）
+            li 圧縮されるのを待つ
+            li 「download」ボタンを押す
+            li 複数ファイルをアップロードした場合は「Download all」を押すとzipでまとめてダウンロードできます
+          p.text サンプルとして手元にあったPNGアイコンをアップロードしてみました。
+          figure.img-figure
+            a(href="assets/img/recommend-site/tinypng-sample-01.png")
+              img.img-figure_img(src="assets/img/recommend-site/tinypng-sample-01.png", alt="アップロードし圧縮し終えたときの様子" width=1044 height=536)
+            figcaption.img-figure_caption アップロードし圧縮し終えたときの様子
+          p.text 上記の通り-77%とだいぶ削減されてイメージキャラクターのパンダも喜んでいるのがわかります。
+            br
+            | 下記に比較ファイルを置きますがこのようなシンプルな色数のアイコンだと違いが分からないほどです。恐らく使ってない色情報や人間の目には判別しづらい色を同色にして情報の削減をしていると予想します。
+          .img-figure_container
+            figure.img-figure
+              a(href="assets/img/recommend-site/tinypng-sample-dragon-before.png")
+                img.img-figure_img(src="assets/img/recommend-site/tinypng-sample-dragon-before.png", alt="龍のアイコン（圧縮前）" width=512 height=512)
+              figcaption.img-figure_caption 圧縮前 22.2KB
+            figure.img-figure
+              a(href="assets/img/recommend-site/tinypng-sample-dragon-after.png")
+                img.img-figure_img(src="assets/img/recommend-site/tinypng-sample-dragon-after.png", alt="龍のアイコン（圧縮後）" width=512 height=512)
+              figcaption.img-figure_caption 圧縮後 5.14KB
+          p.text もちろん元の画像サイズ（512x512という大きさの方のサイズ）は維持されています。
+          p.text JPEGにも使えますがPhotoshopで適切な圧縮率で書き出していればそんなにファイルサイズは変わらない印象があります。
+        section.section_sub
+          h4.section_sub_title 余談
+          p.text このサイトは上記の通り有料プランがあったり、これまた有料ですが"Photoshop Plugin"として販売されていたり"Wordpress Plugin"や”Developer API”が提供されていてWordPressに上げた画像を自動で圧縮してくれたり、TinyPNGを使ったプログラムを自作したりすることもできたりとやれることの幅は想像以上に多いです。
+      section#codic.article-area_section
+        h3.section_title codic
+        .link-box
+          dl.link-box_item
+            dt.link-box_item_title プログラマーのためのネーミング辞書 | codic:
+            dd.link-box_item_link
+              a(href="https://codic.jp/" target="_blank" rel="noopener") https://codic.jp/
+        p.text このサイトは上記の通り有料プランがあったり、これまた有料ですが"Photoshop Plugin"として販売されていたり"Wordpress Plugin"や”Developer API”が提供されていてWordPressに上げた画像を自動で圧縮してくれたり、TinyPNGを使ったプログラムを自作したりすることもできたりとやれることの幅は想像以上に多いです。
+        p.text 会員登録しなくてもとりあえず使えます。会員登録するとオリジナルの辞書やシェア機能が使えるみたいです。
+      section#placehold.article-area_section
+        h3.section_title Placehold.jp
+        .link-box
+          dl.link-box_item
+            dt.link-box_item_title Placehold.jp｜ダミー画像生成 モック用画像作成:
+            dd.link-box_item_link
+              a(href="https://placehold.jp/" target="_blank" rel="noopener") https://placehold.jp/
+        p.text ダミー画像を簡単に生成できるサイトです。
+        p.text サンプルとして公開されているサイトを見ると使い方がなんとなくわかると思います。
+        figure.img-figure
+          a(href="assets/img/recommend-site/placehold-example.png")
+            img.img-figure_img(src="assets/img/recommend-site/placehold-example.png", alt="Placehold.jp Examples 2" width=1440 height=976)
+          figcaption.img-figure_caption
+            a(href="https://placehold.jp/examples/2/" target="_blank" rel="noopener") Placehold.jp Examples 2
+            | より
+        p.text このように画像サイズは決まってるけど中身はまだ完成してないとか作ってない。とりあえず画像を入れたときのイメージを知りたいというときに使うと便利です。
+        p.text さらにオプションも豊富で文字を変えたり色を変えたりCSSを入力して画像を加工したりすることもできます。
+        figure.img-figure
+          a(href="assets/img/recommend-site/generated-dummy.png")
+            img.img-figure_img(src="assets/img/recommend-site/generated-dummy.png", alt="ダミー画像を生成してみた" width=600 height=150)
+          figcaption.img-figure_caption 作ってみた画像
+        figure.img-figure
+          a(href="assets/img/recommend-site/generated-dummy_process.png")
+            img.img-figure_img(src="assets/img/recommend-site/generated-dummy_process.png", alt="ダミー画像を生成してみた過程" width=1057 height=623)
+          figcaption.img-figure_caption 作成過程
+        p.text 更に&nbsp;
+          a(href="https://placehold.jp/150x150.png" target="_blank" rel="noopener") http://placehold.jp/150x150.png
+          | &nbsp;などのURLに直接アクセスするとオプション（ここでは150x150のPNG画像）で指定された画像が表示されるので
+        p.text というコードを挿入すれば画像を生成してダウンロードしなくてもそのままサイト上に表示できます。
+        .code-box
+          pre.code-box_pre
+            code &lt;img src=&quot;https://placehold.jp/150x150.png&quot; alt=&quot;ダミー画像&quot;&gt;
+        p.text 詳しい使い方はサイトのトップページに全て書いてあるあるのでそちらでどうぞ。
+        p.text
+          a(href="https://placehold.jp/rule.html" target="_blank" rel="noopener") Placehold.jp 利用規約
+          | を見ても難しいことは特に書いてないのである程度自由に使えると思いますが、しっかりした本番サイトでそのままURLを埋め込んで使うのは迷惑がかかる気がするし禁止事項に触れる可能性もあるのでお勧めしないです。
+    .totop-box
+      a(href="#")#totop
+        span.material-icons.totop-box_icon arrow_upward

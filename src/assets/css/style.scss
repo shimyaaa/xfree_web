@@ -1,8 +1,9 @@
 @use "../library/nst-reset-css/style"; // reset.css
+@use "base/reset"; // 追加リセット
 @use "../library/nst-reset-css/mixin" as r_m;
 @use "variable" as var;
 @use "base/font";
 @use "base/web-site";
 @use "base/toc";
 @use "base/common-parts";
-@use "site-check/site-check";
+@use "base/fix";

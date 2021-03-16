@@ -1,0 +1,27 @@
+/* 追加リセット */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin-bottom: 64px;
+}
+
+p {
+  word-break: break-all;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+  font-weight: bolder;
+}
+
+figure {
+  margin: 1rem;
+}
+
+img {
+  vertical-align: top;
+}

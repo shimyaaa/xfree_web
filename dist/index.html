@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>WEB制作をするときに見るサイト集</title>
     <meta name="description" content="WEB制作をするときに見るサイト集">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body class="web-site">
@@ -13,16 +14,24 @@
       <h2 class="toc_title">目次</h2>
       <ul class="toc_box">
         <li><a href="#site-check">サイトがちゃんと完成しているかチェックするためのサイト</a>
-          <ul>
+          <ul class="toc_section_title">
             <li><a href="#html-css-checker">HTML/CSSチェッカー</a></li>
             <li><a href="#img-alt-checker">画像のalt属性チェック</a></li>
           </ul>
         </li>
+        <li><a href="#recommend-site">Web制作するときに便利なサイト</a>
+          <ul class="toc_section_title">
+            <li><a href="#can-i-use">Can I use...</a></li>
+            <li><a href="#tinypng">TinyPNG</a></li>
+            <li><a href="#codic">codic</a></li>
+            <li><a href="#placehold">Placehold.jp</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <article class="article_area" id="site-check">
-      <h2 class="article_main-title">サイトがちゃんと完成しているかチェックするためのサイト</h2>
-      <section class="site-check_section" id="html-css-checker">
+    <article class="article-area" id="site-check">
+      <h2 class="article-area_main-title">サイトがちゃんと完成しているかチェックするためのサイト</h2>
+      <section class="article-area_section" id="html-css-checker">
         <h3 class="section_title">HTML/CSSチェッカー</h3>
         <p class="text">完成したファイルに打ち間違いやWeb標準に違反してないかをしらべることができるサイト</p>
         <div class="link-box">
@@ -36,15 +45,17 @@
           </dl>
         </div>
         <p class="text">両方とも<a href="https://ja.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank" rel="noopener">W3C</a>というWebのルールに深く携わっているところが運営してるサイトなので信頼度は抜群。CSSのほうだけ何故か日本語化されている。</p>
-        <h4 class="section_subtitle">使い方</h4>
-        <ol class="how-to-list_box">
-          <li>既に存在しているサイトのURLを入力する</li>
-          <li>パソコン内にあるHTMLやCSSファイルを直接アップロードする</li>
-          <li>テキストエリアに直接文字を入力したりコピペしたりする</li>
-        </ol>
-        <p class="text">主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。</p>
+        <section class="how-to-list">
+          <h4 class="how-to-list_title">使い方</h4>
+          <ol class="how-to-list_box">
+            <li>既に存在しているサイトのURLを入力する</li>
+            <li>パソコン内にあるHTMLやCSSファイルを直接アップロードする</li>
+            <li>テキストエリアに直接文字を入力したりコピペしたりする</li>
+          </ol>
+          <p class="text">主に2番の使い方をすることが多いと思います。他にも色々オプションがあったりしますがここでは割愛。</p>
+        </section>
       </section>
-      <section class="site-check_section" id="img-alt-checker">
+      <section class="article-area_section" id="img-alt-checker">
         <h3 class="section_title">画像のalt属性チェック</h3>
         <p class="text">画像にalt属性を付けるのは必須ですが時々忘れることがあります。<br>それを防ぐために完成したサイトにこのブックマークレットを使えばサイトに使われている画像とalt属性を一覧で見ることができます。</p>
         <div class="code-box">
@@ -52,7 +63,7 @@
           <pre class="code-box_pre"><code>javascript:(function(){var rid=&#39;TW_alt_check&#39;;if(document.getElementById(rid))return;function e(t){return document.getElementsByTagName(t)}function a(o,a){return o.getAttribute(a)}var i=e(&#39;img&#39;);if(i.length&lt;=0)return;var r=document.createElement(&#39;div&#39;);var rcss=&#39;padding:5px;position:absolute;top:0;left:0;background:#fff;border:solid%20#ccc%201px;z-index:999;&#39;;var%20 tblcss=&#39;%20style=\&#39;border-collapse:collapse;background:#fff;\&#39;&#39;;var%20 tdlcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:right;\&#39;&#39;;var%20 tdrcss=&#39;%20style=\&#39;padding:4px;border-bottom:solid%20#ffffff%202px;text-align:left;\&#39;&#39;;r.id=rid;r.style.cssText=rcss;var%20 h=&#39;%3Ctable&#39;+tblcss+&#39;&gt;&#39;;for(var%20 j=0;j&lt;i.length;j++){h+=(j%252==0)?&#39;&lt;tr%20bgcolor=#f6f6f6&gt;&#39;:&#39;&lt;tr%20bgcolor=%23f2f2f2&gt;&#39;;h+=&#39;%3Ctd&#39;+tdlcss+&#39;%3E%3Cimg%20src=&#39;+a(i[j],&#39;src&#39;)+&#39;%3E%3C/td%3E%3Ctd&#39;+tdrcss+&#39;%3E&#39;+a(i[j],&#39;alt&#39;)+&#39;&lt;/td&gt;&lt;/tr&gt;&#39;}h+=&#39;&lt;/table&gt;&#39;;e(&#39;body&#39;)[0].appendChild(r);r.innerHTML=h;r.ondblclick=function(){this.parentNode.removeChild(this)};window.scrollTo(0,0)})()</code></pre>
           <p class="code-box_caption">上記サイトにあるコード</p>
         </div>
-        <h4 class="section_subtitle">使い方</h4>
+        <h4 class="how-to-list_title">使い方</h4>
         <ol class="how-to-list_box">
           <li>適当なサイトをブックマークする</li>
           <li>ブックマークした項目を編集し名前欄を「画像のalt属性チェック」など適当につけてURL欄に上記のコードをコピーしていれます。</li>
@@ -60,6 +71,121 @@
         </ol>
       </section>
     </article>
-    <div class="totop_box"><a href="#" id="totop">トップへ</a></div>
+    <article class="article-area" id="recommend-site">
+      <h2 class="article-area_main-title">Web制作するときに便利なサイト</h2>
+      <section class="article-area_section" id="can-i-use">
+        <h3 class="section_title">Can I use...</h3>
+        <div class="link-box">
+          <dl class="link-box_item">
+            <dt class="link-box_item_title">Can I use... Support tables for HTML5, CSS3, etc:</dt>
+            <dd class="link-box_item_link"><a href="https://caniuse.com/" target="_blank" rel="noopener">https://caniuse.com/</a></dd>
+          </dl>
+        </div>
+        <p class="text">HTML要素やCSSプロパティなどのWeb関係のものが最新のブラウザに対応しているか、いつから対応しているかを知ることができるサイト。</p>
+        <section class="how-to-list">
+          <h4 class="how-to-list_title">使い方</h4>
+          <p class="text">例えば最近広まっている<mark>"WebP"</mark>というGoogleが開発しているJPEG, PNGに代わる軽くて高画質な画像ファイルはどこまでのブラウザが対応しているかが見れます。（以下のサポート状況はすべて2021年1月21日のものです）</p>
+          <p class="text"><a href="https://caniuse.com/webp" target="_blank" rel="noopener">Can I use... "WebP image format"</a></p>
+          <p class="text">対応の種類は大きく3つに分かれていて</p>
+          <ul>
+            <li>緑色は問題なく対応しているブラウザ</li>
+            <li>黄色は部分的に対応していたり注意が必要なブラウザ</li>
+            <li>赤色は全く対応されていないブラウザ</li>
+          </ul>
+          <p class="text">になっています。</p>
+          <p class="text"><mark>WebP</mark>の場合は</p>
+          <ul>
+            <li>"Chrome, Edge, Opera"など"Chromium系"は対応している。</li>
+            <li>"Firefox"も対応している。</li>
+            <li>"Chromium系"のモバイル機種の"Chrome for Android"でも対応。</li>
+            <li>似たモバイル機種の"iOS"では2020年9月にリリースされた最新のiOS14から対応。</li>
+            <li>Macのデフォルトブラウザの"Safari"は最新のOSである"macOS 11 Big Sur"にインストールされた"Safari 14"でないと対応してない。という特殊な条件があるので黄色の表示。</li>
+            <li>IE (Internet Explorer)はもう更新されないので最新技術には対応されないはずなので永遠に赤色の表示。</li>
+          </ul>
+          <p class="text">ということが読み取れるので、古い端末を利用している人を切り捨ててある程度最新の状態を維持できてるユーザーが多く訪れることを想定しているWebサイトなら既にガンガン使える技術ということがわかります。</p>
+          <p class="text">他の要素やプロパティも見ていくと<mark>"h1"</mark>と誰でも必ずHTML要素は<a href="https://caniuse.com/mdn-html_elements_h1" target="_blank" rel="noopener">"HTML element: h1"</a>を見ると主要ブラウザで全て緑色になっており問題なく使えることがわかります。</p>
+          <p class="text">逆に<a href="https://caniuse.com/loading-lazy-attr" target="_blank" rel="noopener">"Lazy loading via attribute for images &amp; iframes”</a>という最近追加された画像やiframeの読み込むタイミングを指定できる属性はほぼ赤色で"Chromium系"のみ使えて"FIrefox"は画像のみ対応ということで使うには注意が必要なことがわかります。</p>
+        </section>
+      </section>
+      <section class="article-area_section" id="tinypng">
+        <h3 class="section_title">TinyPNG</h3>
+        <div class="link-box">
+          <dl class="link-box_item">
+            <dt class="link-box_item_title">TinyPNG – Compress PNG images while preserving transparency:</dt>
+            <dd class="link-box_item_link"><a href="https://tinypng.com/" target="_blank" rel="noopener">https://tinypng.com/</a></dd>
+          </dl>
+        </div>
+        <p class="text">PNGとJPEGを見た目損なわずにファイルサイズを削減してくれるサイトです。特にPNG画像で威力を発揮します。透過済のPNGファイルでも透過済のまま圧縮できます。</p>
+        <section class="how-to-list">
+          <h4 class="how-to-list_title">使い方</h4>
+          <ol class="how-to-list_box">
+            <li>圧縮したいファイルをアップロードする（一度に最高20枚、1ファイル5MBまで可能。それ以上に一度で圧縮したい場合は有料プランへ）</li>
+            <li>圧縮されるのを待つ</li>
+            <li>「download」ボタンを押す</li>
+            <li>複数ファイルをアップロードした場合は「Download all」を押すとzipでまとめてダウンロードできます</li>
+          </ol>
+          <p class="text">サンプルとして手元にあったPNGアイコンをアップロードしてみました。</p>
+          <figure class="img-figure"><a href="assets/img/recommend-site/tinypng-sample-01.png"><img class="img-figure_img" src="assets/img/recommend-site/tinypng-sample-01.png" alt="アップロードし圧縮し終えたときの様子" width="1044" height="536"></a>
+            <figcaption class="img-figure_caption">アップロードし圧縮し終えたときの様子</figcaption>
+          </figure>
+          <p class="text">上記の通り-77%とだいぶ削減されてイメージキャラクターのパンダも喜んでいるのがわかります。<br>下記に比較ファイルを置きますがこのようなシンプルな色数のアイコンだと違いが分からないほどです。恐らく使ってない色情報や人間の目には判別しづらい色を同色にして情報の削減をしていると予想します。</p>
+          <div class="img-figure_container">
+            <figure class="img-figure"><a href="assets/img/recommend-site/tinypng-sample-dragon-before.png"><img class="img-figure_img" src="assets/img/recommend-site/tinypng-sample-dragon-before.png" alt="龍のアイコン（圧縮前）" width="512" height="512"></a>
+              <figcaption class="img-figure_caption">圧縮前 22.2KB</figcaption>
+            </figure>
+            <figure class="img-figure"><a href="assets/img/recommend-site/tinypng-sample-dragon-after.png"><img class="img-figure_img" src="assets/img/recommend-site/tinypng-sample-dragon-after.png" alt="龍のアイコン（圧縮後）" width="512" height="512"></a>
+              <figcaption class="img-figure_caption">圧縮後 5.14KB</figcaption>
+            </figure>
+          </div>
+          <p class="text">もちろん元の画像サイズ（512x512という大きさの方のサイズ）は維持されています。</p>
+          <p class="text">JPEGにも使えますがPhotoshopで適切な圧縮率で書き出していればそんなにファイルサイズは変わらない印象があります。</p>
+        </section>
+        <section class="section_sub">
+          <h4 class="section_sub_title">余談</h4>
+          <p class="text">このサイトは上記の通り有料プランがあったり、これまた有料ですが"Photoshop Plugin"として販売されていたり"Wordpress Plugin"や”Developer API”が提供されていてWordPressに上げた画像を自動で圧縮してくれたり、TinyPNGを使ったプログラムを自作したりすることもできたりとやれることの幅は想像以上に多いです。</p>
+        </section>
+      </section>
+      <section class="article-area_section" id="codic">
+        <h3 class="section_title">codic</h3>
+        <div class="link-box">
+          <dl class="link-box_item">
+            <dt class="link-box_item_title">プログラマーのためのネーミング辞書 | codic:</dt>
+            <dd class="link-box_item_link"><a href="https://codic.jp/" target="_blank" rel="noopener">https://codic.jp/</a></dd>
+          </dl>
+        </div>
+        <p class="text">このサイトは上記の通り有料プランがあったり、これまた有料ですが"Photoshop Plugin"として販売されていたり"Wordpress Plugin"や”Developer API”が提供されていてWordPressに上げた画像を自動で圧縮してくれたり、TinyPNGを使ったプログラムを自作したりすることもできたりとやれることの幅は想像以上に多いです。</p>
+        <p class="text">会員登録しなくてもとりあえず使えます。会員登録するとオリジナルの辞書やシェア機能が使えるみたいです。</p>
+      </section>
+      <section class="article-area_section" id="placehold">
+        <h3 class="section_title">Placehold.jp</h3>
+        <div class="link-box">
+          <dl class="link-box_item">
+            <dt class="link-box_item_title">Placehold.jp｜ダミー画像生成 モック用画像作成:</dt>
+            <dd class="link-box_item_link"><a href="https://placehold.jp/" target="_blank" rel="noopener">https://placehold.jp/</a></dd>
+          </dl>
+        </div>
+        <p class="text">ダミー画像を簡単に生成できるサイトです。</p>
+        <p class="text">サンプルとして公開されているサイトを見ると使い方がなんとなくわかると思います。</p>
+        <figure class="img-figure"><a href="assets/img/recommend-site/placehold-example.png"><img class="img-figure_img" src="assets/img/recommend-site/placehold-example.png" alt="Placehold.jp Examples 2" width="1440" height="976"></a>
+          <figcaption class="img-figure_caption"><a href="https://placehold.jp/examples/2/" target="_blank" rel="noopener">Placehold.jp Examples 2</a>より</figcaption>
+        </figure>
+        <p class="text">このように画像サイズは決まってるけど中身はまだ完成してないとか作ってない。とりあえず画像を入れたときのイメージを知りたいというときに使うと便利です。</p>
+        <p class="text">さらにオプションも豊富で文字を変えたり色を変えたりCSSを入力して画像を加工したりすることもできます。</p>
+        <figure class="img-figure"><a href="assets/img/recommend-site/generated-dummy.png"><img class="img-figure_img" src="assets/img/recommend-site/generated-dummy.png" alt="ダミー画像を生成してみた" width="600" height="150"></a>
+          <figcaption class="img-figure_caption">作ってみた画像</figcaption>
+        </figure>
+        <figure class="img-figure"><a href="assets/img/recommend-site/generated-dummy_process.png"><img class="img-figure_img" src="assets/img/recommend-site/generated-dummy_process.png" alt="ダミー画像を生成してみた過程" width="1057" height="623"></a>
+          <figcaption class="img-figure_caption">作成過程</figcaption>
+        </figure>
+        <p class="text">更に&nbsp;<a href="https://placehold.jp/150x150.png" target="_blank" rel="noopener">http://placehold.jp/150x150.png</a>&nbsp;などのURLに直接アクセスするとオプション（ここでは150x150のPNG画像）で指定された画像が表示されるので</p>
+        <p class="text">というコードを挿入すれば画像を生成してダウンロードしなくてもそのままサイト上に表示できます。</p>
+        <div class="code-box">
+          <pre class="code-box_pre"><code>&lt;img src=&quot;https://placehold.jp/150x150.png&quot; alt=&quot;ダミー画像&quot;&gt;</code></pre>
+        </div>
+        <p class="text">詳しい使い方はサイトのトップページに全て書いてあるあるのでそちらでどうぞ。</p>
+        <p class="text"><a href="https://placehold.jp/rule.html" target="_blank" rel="noopener">Placehold.jp 利用規約</a>を見ても難しいことは特に書いてないのである程度自由に使えると思いますが、しっかりした本番サイトでそのままURLを埋め込んで使うのは迷惑がかかる気がするし禁止事項に触れる可能性もあるのでお勧めしないです。</p>
+      </section>
+    </article>
+    <div class="totop-box"><a href="#" id="totop"><span class="material-icons totop-box_icon">arrow_upward</span></a></div>
   </body>
 </html>

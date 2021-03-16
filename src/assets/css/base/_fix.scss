@@ -1,0 +1,13 @@
+/* fix */
+// マージン調整
+#html-css-checker > .text:nth-child(2),
+#img-alt-checker > .text:nth-child(2),
+.section_sub > .text:nth-child(2) {
+  margin-top: 0;
+}
+
+#placehold {
+  .img-figure + .img-figure {
+    margin-top: 1rem;
+  }
+}
